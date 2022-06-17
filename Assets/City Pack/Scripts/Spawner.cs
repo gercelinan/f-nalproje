@@ -8,6 +8,8 @@ public class Spawner : MonoBehaviour
     float spawntime;
     public float spawnrate;
 
+    public GameObject sound;
+
     public List<GameObject> buildings = new List<GameObject>();
 
     GameObject bina;
@@ -38,6 +40,7 @@ public class Spawner : MonoBehaviour
             {
                 spawntime = Time.time + spawnrate;
 
+                Instantiate(sound);
 
                 Vector3 binax = new Vector3(bina.transform.position.x, bina.transform.position.y + -2f, bina.transform.position.z);
 
@@ -48,7 +51,7 @@ public class Spawner : MonoBehaviour
 
 
 
-
+                
 
 
 
